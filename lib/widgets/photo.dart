@@ -18,17 +18,45 @@ class _PhotoState extends State<Photo> {
             borderRadius: BorderRadius.circular(15.0),
           ),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Image.network(widget.photo['src']['original']),
-              ListTile(
+              ExpansionTile(
                 title: Text(
                   "Artist : ${widget.photo['photographer']}",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.0),
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14.0),
                 ),
                 trailing: IconButton(
+                  color: Colors.black,
                   icon: Icon(Icons.star),
                   onPressed: () {},
                 ),
+                children: [
+                  Text(
+                    "ID : ${widget.photo['id']}",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14.0),
+                  ),
+                  Text(
+                    "Width : ${widget.photo['width']}",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14.0),
+                  ),
+                  Text(
+                    "Height : ${widget.photo['height']}",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14.0),
+                  ),
+                ],
               )
             ],
           )),
