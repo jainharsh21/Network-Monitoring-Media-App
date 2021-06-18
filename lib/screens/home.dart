@@ -3,6 +3,7 @@ import 'package:connectivity_widget/connectivity_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:rjstudio_assignment/constants/colors.dart';
 import 'package:rjstudio_assignment/utils/apiCaller.dart';
+import 'package:rjstudio_assignment/widgets/photo.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -80,8 +81,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                   itemCount: photos.length,
                                   itemBuilder: (context, index) {
                                     var photo = photos[index];
-                                    print(photo);
-                                    return Text(photo['photographer'].toUpperCase());
+                                    return Photo(photo: photo);
                                   }),
                               Center(
                                 child: Text('Videos'),

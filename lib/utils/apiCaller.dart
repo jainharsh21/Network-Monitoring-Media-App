@@ -9,7 +9,7 @@ class ApiCaller {
   String baseVideoUrl = 'https://api.pexels.com/videos';
 
   getPhotos() async {
-    var res = await http.get(Uri.parse("$baseUrl/search?query=nature&per_page=10"),
+    var res = await http.get(Uri.parse("$baseUrl/search?query=nature&per_page=3"),
         headers: {HttpHeaders.authorizationHeader: API_KEY});
     var data = json.decode(res.body);
     var photos = data['photos'];
