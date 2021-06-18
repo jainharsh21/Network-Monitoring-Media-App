@@ -15,4 +15,12 @@ class ApiCaller {
     var photos = data['photos'];
     return photos;
   }
+
+  getVideos() async{
+    var res = await http.get(Uri.parse("$baseVideoUrl/search?query=nature&per_page=3"),
+        headers: {HttpHeaders.authorizationHeader: API_KEY});
+    var data = json.decode(res.body);
+    var videos = data['videos'];
+    return videos;
+  }
 }

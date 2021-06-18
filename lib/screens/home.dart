@@ -14,12 +14,15 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
   late TabController _tabController;
   List<Tab> tabList = [];
   List photos = [];
+  List videos = [];
 
   initData() async {
     ApiCaller a = ApiCaller();
     var data = await a.getPhotos();
+    var videoData = await a.getVideos();
     setState(() {
       photos = data;
+      videos = videoData;
     });
   }
 
@@ -83,9 +86,12 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                     var photo = photos[index];
                                     return Photo(photo: photo);
                                   }),
-                              Center(
-                                child: Text('Videos'),
-                              )
+                              ListView.builder(
+                                  itemCount: videos.length,
+                                  itemBuilder: (context, index) {
+                                    var video = videos[index];
+                                    return Text(video['user']['name']);
+                                  }),
                             ],
                           ),
                         )
