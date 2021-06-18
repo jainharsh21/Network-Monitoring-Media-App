@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:rjstudio_assignment/constants/colors.dart';
 import 'package:rjstudio_assignment/utils/apiCaller.dart';
 import 'package:rjstudio_assignment/widgets/photo.dart';
+import 'package:rjstudio_assignment/widgets/video.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -90,7 +91,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                   itemCount: videos.length,
                                   itemBuilder: (context, index) {
                                     var video = videos[index];
-                                    return Text(video['user']['name']);
+                                    return Video(video: video);
                                   }),
                             ],
                           ),
