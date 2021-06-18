@@ -2,6 +2,7 @@
 import 'package:connectivity_widget/connectivity_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:rjstudio_assignment/constants/colors.dart';
+import 'package:rjstudio_assignment/utils/apiCaller.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -15,6 +16,8 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
   @override
   void initState() {
     _tabController = new TabController(vsync: this, length: 2);
+    ApiCaller a = ApiCaller();
+    a.getPhotos();
     super.initState();
   }
 
