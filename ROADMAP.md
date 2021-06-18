@@ -1,5 +1,7 @@
 # Improvements
 
+The api key is stored in the config folder which is being pused to github, this is for y'all to have access to it, but we can use the flutter dotenv to secure our key.
+
 1) The UI and UX could be made more aesthetic using existing packages.
 2) We can create models for the data of video and photos we are getting from api for better access.
 3) We can use cached network image to cache the images as we are getting them from network, it would load much faster.
