@@ -1,16 +1,48 @@
-# rjstudio_assignment
+# Rajasthan Studio Assignment
 
-A new Flutter project.
+## About the App
+
+App that shows images and videos from the [Pexels](https://www.pexels.com/api/documentation/) API along with continous network monitoring.
+
+The app would have two main screens, home and favourites.
+Home screen and Favourites Screen.
+
+Both of those screens are further divided into sub-tabs "Photos" and "Videos"
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### How to Use 
 
-A few resources to get you started if this is your first Flutter project:
+**Step 1:**
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Download or clone this repo by using the link below:
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+https://github.com/jainharsh21/Rajasthan-Studios-Assignment.git
+```
+
+**Step 2:**
+
+Go to project root and execute the following command in console to get the required dependencies: 
+
+```
+flutter pub get 
+```
+
+**Step 3:**
+
+Run the project with no sound null safety(required for some plugins)
+
+```
+flutter run --no-sound-null-safety
+```
+
+### Feedback
+
+Due to the hectic schedule I am having currently, I wasn't able to do the viewing favourites part.
+
+Although it is very easy to implement, we can use shared preferences to store the photos/videos marked by the user...and show them in the screen I have created. This way we won't need a seperate database as it is going to be stored in the app data itself.
+
+Also, I felt that using BLoC for this assignment would not be a good idea as it has limited number of screens and its recommended not to use it unless we have data updating across multiple screens.
+
+Proper folder structure has been maintained.
