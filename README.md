@@ -37,6 +37,20 @@ Run the project with no sound null safety(required for some plugins)
 flutter run --no-sound-null-safety
 ```
 
+## Screenshots
+
+### Photos 
+
+![image](https://user-images.githubusercontent.com/44740658/122585702-663fa780-d079-11eb-8d26-9502ed9e410e.png)
+
+### Videos
+![image](https://user-images.githubusercontent.com/44740658/122585706-693a9800-d079-11eb-8c86-2b6d851c16ae.png)
+
+### No Internet
+![image](https://user-images.githubusercontent.com/44740658/122585721-6c358880-d079-11eb-916e-0474062fa5e8.png)
+
+
+
 ### Feedback
 
 Due to the hectic schedule I am having currently, I wasn't able to do the viewing favourites part.
