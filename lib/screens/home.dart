@@ -69,7 +69,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                           indicatorSize: TabBarIndicatorSize.tab,
                           tabs: [
                             Tab(
-                              text: "PHOTS",
+                              text: "PHOTOS",
                             ),
                             Tab(
                               text: "VIDEOS",
