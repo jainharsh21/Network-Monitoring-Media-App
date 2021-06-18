@@ -12,12 +12,20 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> with TickerProviderStateMixin {
   late TabController _tabController;
   List<Tab> tabList = [];
+  List photos = [];
+
+  initData() async {
+    ApiCaller a = ApiCaller();
+    var data = await a.getPhotos();
+    setState(() {
+      photos = data;
+    });
+  }
 
   @override
   void initState() {
     _tabController = new TabController(vsync: this, length: 2);
-    ApiCaller a = ApiCaller();
-    a.getPhotos();
+    initData();
     super.initState();
   }
 
@@ -68,9 +76,13 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                           child: TabBarView(
                             controller: _tabController,
                             children: [
-                              Center(
-                                child: Text('Photos'),
-                              ),
+                              ListView.builder(
+                                  itemCount: photos.length,
+                                  itemBuilder: (context, index) {
+                                    var photo = photos[index];
+                                    print(photo);
+                                    return Text(photo['photographer'].toUpperCase());
+                                  }),
                               Center(
                                 child: Text('Videos'),
                               )
