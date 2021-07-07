@@ -1,4 +1,4 @@
-# Rajasthan Studio Assignment
+# Network Monitoring Media App
 
 ## About the App
 
